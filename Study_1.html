@@ -151,13 +151,15 @@
 
  // neutral faces
   var CS_Neut_fem = [
-  "Stim_selected/Fem_Neut_1.jpeg", 
-  "Stim_selected/Fem_Neut_2.jpeg"
+  "Stim_selected/F008C_Neut.jpeg", 
+  "Stim_selected/F024C_Neut.jpeg", 
+  "Stim_selected/F104C_Neut.jpeg"
   ];
 
   var CS_Neut_male = [
-  "Stim_selected/Male_Neut_1.jpeg", 
-  "Stim_selected/Male_Neut_2.jpeg"
+  "Stim_selected/M073C_Neut.jpeg", 
+  "Stim_selected/M079C_Neut.jpeg",
+  "Stim_selected/M082C_Neut.jpeg"
   ];
 
    // Randomly picking female faces and creating a list
@@ -170,12 +172,9 @@
      // Trustworthiness
   US_highTrust_fem = _.sampleSize(US_highTrust_fem, 1);
   US_lowTrust_fem = _.sampleSize(US_lowTrust_fem, 1);
+     //Neutral faces
+  CS_Neut_fem = _.sampleSize(CS_Neut_fem, 2);
 
-/*
-  var list_US_highAtt_fem = _.flattenDeep([US_highAtt_fem, US_lowAtt_fem]);
-  var list_US_highDom_fem = _.flattenDeep([US_highDom_fem, US_lowDom_fem]);
-  var list_US_highTrust_fem = _.flattenDeep([US_highTrust_fem, US_lowTrust_fem]);
-*/
   // Randomly picking male faces and creating a list
    // Attractiveness
   US_highAtt_male = _.sampleSize(US_highAtt_male, 1);
@@ -186,12 +185,9 @@
      // Trustworthiness
   US_highTrust_male = _.sampleSize(US_highTrust_male, 1);
   US_lowTrust_male = _.sampleSize(US_lowTrust_male, 1);
+  //Neutral faces
+  CS_Neut_male = _.sampleSize(CS_Neut_male, 2);
 
-/*
-  var list_US_highAtt_male = _.flattenDeep([US_highAtt_male, US_lowAtt_male]);
-  var list_US_highDom_male = _.flattenDeep([US_highDom_male, US_lowDom_male]);
-  var list_US_highTrust_male = _.flattenDeep([US_highTrust_male, US_lowTrust_male]);
-*/
 
 // randomly assigning a target dimension
   var target_dim = jsPsych.randomization.sampleWithoutReplacement(["attractiveness", "dominance", "trustworthiness"], 1)[0];
@@ -615,7 +611,7 @@
         on_load: function() {
           window.scrollTo(0, 0);
           $(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "430px");
+          $(".jspsych-content").css("margin-top", "350px");
           $(".jspsych-survey-likert-statement").css("margin", "0px");
           $(".jspsych-survey-likert-statement").css("padding", "0px");
           $(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
@@ -722,7 +718,7 @@ USCSjudge.map(function(ciImg){
         on_load: function() {
           window.scrollTo(0, 0);
           $(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "430px");
+          $(".jspsych-content").css("margin-top", "350px");
           $(".jspsych-survey-likert-statement").css("margin", "0px");
           $(".jspsych-survey-likert-statement").css("padding", "0px");
           $(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
@@ -759,7 +755,7 @@ USCSjudge.map(function(ciImg){
         on_load: function() {
           window.scrollTo(0, 0);
           $(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "430px");
+          $(".jspsych-content").css("margin-top", "350px");
           $(".jspsych-survey-likert-statement").css("margin", "0px");
           $(".jspsych-survey-likert-statement").css("padding", "0px");
           $(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
@@ -796,7 +792,7 @@ USCSjudge.map(function(ciImg){
         on_load: function() {
           window.scrollTo(0, 0);
           $(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "430px");
+          $(".jspsych-content").css("margin-top", "350px");
           $(".jspsych-survey-likert-statement").css("margin", "0px");
           $(".jspsych-survey-likert-statement").css("padding", "0px");
           $(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
